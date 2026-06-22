@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cameraRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/cameraGl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/cameraStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="monospace"
+        android:textSize="11sp"
+        android:text="@string/camera_starting" />
+
+    <!-- mode tabs: Single / Gradient / Ombre / Multi -->
+    <LinearLayout
+        android:id="@+id/tabRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="6dp" />
+
+    <!-- color slots (Màu 1 / Màu 2) for gradient + ombre -->
+    <LinearLayout
+        android:id="@+id/slotRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="6dp"
+        android:gravity="center_vertical"
+        android:visibility="gone" />
+
+    <!-- shine slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_shine"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+        <SeekBar
+            android:id="@+id/shineSeek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="50" />
+    </LinearLayout>
+
+    <!-- alpha (color strength) slider — single mode only -->
+    <LinearLayout
+        android:id="@+id/alphaRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_intensity"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+        <SeekBar
+            android:id="@+id/alphaSeek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/flipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:text="@string/flip" />
+
+        <Button
+            android:id="@+id/captureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:text="@string/capture" />
+
+        <Button
+            android:id="@+id/recordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:text="@string/record" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/cameraSwatchRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

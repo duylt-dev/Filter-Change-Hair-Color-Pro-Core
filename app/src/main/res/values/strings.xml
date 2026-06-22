@@ -1,3 +1,73 @@
 <resources>
     <string name="app_name">FilterChangeHairColorPro</string>
+
+    <!-- common / buttons -->
+    <string name="pick_image">Chọn ảnh</string>
+    <string name="view_original">Xem gốc</string>
+    <string name="view_result">Xem kết quả</string>
+    <string name="save_image">Lưu ảnh</string>
+    <string name="camera">Camera</string>
+    <string name="preview">preview</string>
+    <string name="flip">Đổi</string>
+    <string name="capture">Chụp</string>
+    <string name="record">Quay</string>
+    <string name="record_stop">Dừng</string>
+
+    <!-- sliders -->
+    <string name="hair_intensity">Độ đậm tóc</string>
+    <string name="hair_shine">Độ bóng tóc</string>
+    <string name="skin_smooth">Làm mịn da</string>
+    <string name="skin_whiten">Trắng da (sáng da)</string>
+    <string name="label_shine">Bóng</string>
+    <string name="label_intensity">Độ đậm</string>
+
+    <!-- modes / color slots -->
+    <string name="mode_single">Đơn sắc</string>
+    <string name="mode_ombre">Ombre</string>
+    <string name="mode_multi">Multi</string>
+    <string name="slot_color1">Màu 1</string>
+    <string name="slot_color2">Màu 2</string>
+    <string name="hair_original">Tóc gốc</string>
+    <string name="off">Gốc</string>
+
+    <!-- photo screen status -->
+    <string name="status_loading_engine">Đang nạp engine…</string>
+    <string name="status_engine_ready">Engine sẵn sàng. Chọn ảnh có khuôn mặt để bắt đầu.</string>
+    <string name="status_pick_face">Chọn ảnh có khuôn mặt để bắt đầu.</string>
+    <string name="status_loading_image">Đang tải ảnh…</string>
+    <string name="status_image_selected">Đã chọn ảnh %1$d×%2$d. Chọn màu + chế độ + thanh trượt.</string>
+    <string name="status_image_load_error">Lỗi tải ảnh: %1$s</string>
+    <string name="status_no_result_to_save">Chưa có ảnh kết quả để lưu.</string>
+    <string name="status_saving_image">Đang lưu ảnh…</string>
+    <string name="status_image_saved">Đã lưu ảnh vào Thư viện ✓</string>
+    <string name="status_save_image_failed">Lưu ảnh lỗi.</string>
+    <string name="status_original_no_effect">Ảnh gốc (chưa chọn hiệu ứng)</string>
+    <string name="status_processing">Đang xử lý…</string>
+    <string name="status_processing_error">Lỗi xử lý</string>
+    <string name="device_unsupported">❌ Thiết bị không hỗ trợ (cần arm64/v7a, Android 8.0+).</string>
+    <string name="engine_load_failed">❌ Không nạp được engine làm đẹp.</string>
+
+    <!-- photo result summary -->
+    <string name="summary_hair_single">tóc %1$s</string>
+    <string name="summary_hair_ombre">Ombre %1$s/%2$s</string>
+    <string name="summary_hair_detail">%1$s (đậm %2$d, bóng %3$d)</string>
+    <string name="summary_smooth">mịn %1$d</string>
+    <string name="summary_whiten">trắng %1$d</string>
+    <string name="summary_multi">Multi %1$d</string>
+    <string name="summary_done">%1$s ✓ (%2$d ms)</string>
+
+    <!-- camera screen -->
+    <string name="camera_starting">Đang khởi động camera…</string>
+    <string name="camera_permission_needed">Cần cấp quyền Camera để dùng tính năng này.</string>
+    <string name="camera_open_error">Lỗi mở camera: %1$s</string>
+    <string name="camera_device_unsupported">❌ Thiết bị không hỗ trợ (cần arm64/v7a, Android 8.0+). Vẫn xem được camera.</string>
+    <string name="camera_engine_load_failed">❌ Không nạp được engine. Vẫn xem được camera.</string>
+    <string name="camera_fps_status">fps≈%1$d  •  %2$s</string>
+    <string name="toast_image_saved">Đã lưu ảnh vào Thư viện</string>
+    <string name="toast_image_save_failed">Lưu ảnh lỗi</string>
+    <string name="toast_engine_not_ready">Engine chưa sẵn sàng</string>
+    <string name="toast_recording">Đang quay…</string>
+    <string name="toast_video_saved">Đã lưu video vào Thư viện</string>
+    <string name="toast_video_save_failed">Lưu video lỗi</string>
+    <string name="toast_record_failed_empty">Quay video lỗi (file rỗng)</string>
 </resources>

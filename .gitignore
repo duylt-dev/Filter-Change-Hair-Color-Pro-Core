@@ -1,15 +1,21 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
+# Gradle / build outputs
+.gradle/
+build/
 /captures
 .externalNativeBuild
-.cxx
+.cxx/
+
+# Kotlin
+.kotlin/
+
+# IDE (Android Studio / IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Local config & secrets (never commit) — keep credentials in ~/.gradle/gradle.properties
 local.properties
+
+# OS
+.DS_Store

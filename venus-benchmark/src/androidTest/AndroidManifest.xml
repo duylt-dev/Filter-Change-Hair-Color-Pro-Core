@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      BenchmarkRule (androidx.benchmark) hard-codes GrantPermissionRule.grant(WRITE_EXTERNAL_STORAGE)
+      with no SDK guard. The permission must therefore be *declared* (uncapped) so `pm grant`
+      succeeds — on API 33+ it is a deprecated but still-grantable dangerous permission (a no-op for
+      scoped storage). Capping it with maxSdkVersion makes it absent on new devices and the grant
+      fails with "not requested by package". Result JSON is steered to a shell-readable dir via the
+      `additionalTestOutputDir` instrumentation arg (see build.gradle.kts).
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest>

@@ -19,9 +19,20 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // venus-sdk published to GitHub Packages (private). Creds in ~/.gradle/gradle.properties
+        // (gpr.user/gpr.key) or env GITHUB_ACTOR/GITHUB_TOKEN — token needs read:packages.
+        maven {
+            url = uri("https://maven.pkg.github.com/duylt-dev/Filter-Change-Hair-Color-Pro-Core")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR")
+                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
 
 rootProject.name = "FilterChangeHairColorPro"
 include(":app")
+include(":venus-sdk")
+include(":venus-benchmark")
  
