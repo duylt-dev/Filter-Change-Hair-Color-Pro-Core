@@ -83,15 +83,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    // B3: split the APK per ABI so each device downloads only its own native libs (~28M+17M)
-    // instead of the ~67M fat APK. universalApk=true also emits one combined APK for ad-hoc installs.
-    // (For Play, an App Bundle does this automatically — prefer `bundleRelease` when publishing.)
     splits {
         abi {
-            isEnable = true
-            reset()
-            include("arm64-v8a", "armeabi-v7a")
-            isUniversalApk = true
+            isEnable = false
         }
     }
 
